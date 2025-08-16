@@ -1,0 +1,291 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gmarket Sans', sans-serif;
+    background-color: #f5f5f5;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 왼쪽 채팅 영역 */
+.chat-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-right: 1px solid #e0e0e0;
+}
+
+/* 헤더 */
+.header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.emoji {
+    font-size: 24px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* 채팅 로그 */
+.chat-log {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fafafa;
+}
+
+.message {
+    margin-bottom: 8px;
+    font-size: 14px;
+    padding: 4px 0;
+}
+
+.message.server {
+    color: #666;
+}
+
+.message.client {
+    color: #333;
+    margin-left: 20px;
+}
+
+/* 채팅 컨트롤 */
+.chat-controls {
+    padding: 20px;
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+}
+
+.voice-messages {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    align-items: center;
+}
+
+.voice-btn {
+    background-color: #9ca3af;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-family: 'Gmarket Sans', sans-serif;
+    cursor: pointer;
+}
+
+.play-btn {
+    background-color: #6b7280;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: 'Gmarket Sans', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.play-btn.small {
+    background-color: #374151;
+    padding: 4px 8px;
+    font-size: 11px;
+}
+
+.play-icon {
+    font-size: 10px;
+}
+
+.time {
+    font-size: 11px;
+}
+
+.user-message {
+    background-color: #1f2937;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.assistant-message {
+    background-color: #6b7280;
+    color: white;
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.message-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Gmarket Sans', sans-serif;
+    background-color: #f9fafb;
+}
+
+.message-input::placeholder {
+    color: #9ca3af;
+}
+
+.input-controls {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.control-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Gmarket Sans', sans-serif;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.control-btn.secondary {
+    background-color: #6b7280;
+    color: white;
+}
+
+.control-btn.primary {
+    background-color: #1f2937;
+    color: white;
+}
+
+/* 오른쪽 패널 */
+.right-panel {
+    width: 320px;
+    background-color: #f3f4f6;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.panel-section h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 16px;
+}
+
+.dropdown-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dropdown {
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Gmarket Sans', sans-serif;
+    background-color: #e5e7eb;
+    color: #374151;
+    cursor: pointer;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23374151" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+.test-btn {
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Gmarket Sans', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.test-btn:hover {
+    background-color: #374151;
+}
+
+/* 스크롤바 스타일링 */
+.chat-log::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-log::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.chat-log::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.chat-log::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .right-panel {
+        width: 100%;
+        padding: 16px;
+    }
+    
+    .input-controls {
+        flex-direction: column;
+    }
+    
+    .control-btn {
+        width: 100%;
+    }
+}
